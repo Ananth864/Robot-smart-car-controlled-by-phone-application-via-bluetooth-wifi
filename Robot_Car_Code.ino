@@ -60,62 +60,55 @@ void loop() {
   
 
 
-if (xAxis > 130 && xAxis <150 && yAxis > 130 && yAxis <150){Stop();}
+if (xAxis > 110 && xAxis <140 && yAxis > 110 && yAxis <140){Stop();}
 
 
-if (yAxis > 130 && yAxis <150){    
+if (yAxis > 110 && yAxis <140){    
 
-if (xAxis < 130){left();
-motorA = map(xAxis, 130, 60, 100, 255);
-motorB = map(xAxis, 130, 60, 100, 255);    
-}
-
-if (xAxis > 150) {right();
-motorA = map(xAxis, 150, 220, 100, 255);
-motorB = map(xAxis, 150, 220, 100, 255); 
-}
-
-}else{
-
-if (xAxis > 130 && xAxis <150){   
-
-if (yAxis < 130){front();}
-if (yAxis > 150){reverse();}
-
-if (yAxis < 130){
-motorA = map(yAxis, 130, 60, 100, 255);
-motorB = map(yAxis, 130, 60, 100, 255); 
-}
-
-if (yAxis > 150){
-motorA = map(yAxis, 150, 220, 100, 255);
-motorB = map(yAxis, 150, 220, 100, 255);
- }
- 
-}else{
-
-if (yAxis < 130){front();}
-if (yAxis > 150){reverse();}
-
-if (xAxis < 130){
-motorA = 255;
-motorB = map(xAxis, 130, 60, 255, 50); 
- }
- 
-if (xAxis > 150){
-motorA = map(xAxis, 150, 220, 255, 50);
-motorB = 255; 
+  if (xAxis < 110){left();
+    motorA = map(xAxis, 0, 110, 255, 100);
+    motorB = map(xAxis, 0, 110, 255, 100);    
   }
+
+  if (xAxis > 140) {right();
+    motorA = map(xAxis, 140, 250, 100, 255);
+    motorB = map(xAxis, 140, 250, 100, 255); 
+  }
+
+}else{
+
+  if (xAxis > 110 && xAxis <140){   
+
+  if (yAxis < 110){front();
+    motorA = map(yAxis, 110, 0, 100, 255);
+    motorB = map(yAxis, 110, 0, 100, 255); 
+  }
+
+  if (yAxis > 140){reverse();
+    motorA = map(yAxis, 140, 250, 100, 255);
+    motorB = map(yAxis, 140, 250, 100, 255);
+  }
+ 
+  }else{
+
+    if (yAxis < 110){front();}
+    if (yAxis > 140){reverse();}
+
+    if (xAxis < 110){
+      motorA = 255;
+      motorB = map(xAxis, 110, 0, 255, 50); 
+    }
+ 
+    if (xAxis > 140){
+      motorA = map(xAxis, 140, 250, 255, 50);
+      motorB = 255; 
+    }
   
- } 
+  } 
 }
 
-   //Serial.print(motorA);
-   //Serial.print(",");
-   //Serial.println(motorA);
-
-analogWrite(enA, motorA); // Send PWM signal to motor A
-analogWrite(enB, motorB); // Send PWM signal to motor B
+analogWrite(enA, motorA); 
+analogWrite(enB, motorB); 
 }
 
 
