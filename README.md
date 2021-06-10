@@ -12,7 +12,5 @@ arduino IDE. Challenging part of the project was to make an app that communicate
 
 What could be improved:
 Integrate a collision avoidance system which acts on the warning system that prohibits the car from moving foward and only allows reverse mode. This can be implemented by just
-changing the code to switch from front() state to reverse() state whenver the distance is less than 5cm. The top half of the joystick also has to be deactivated.
-
-Replacing castor wheel in the front with 2 more wheels with steering enabled with the help of a servo. This is better than rear wheel differential to steer the car since it has 
+changing the code to switch from front() state to reverse() state whenver the distance is less than 5cm. The top half of the joystick also has to be deactivated. Secondly, we can replace the castor wheel in the front with 2 more wheels with steering enabled using a servo. This is better than rear wheel differential to steer the car since it has 
 better handling.
