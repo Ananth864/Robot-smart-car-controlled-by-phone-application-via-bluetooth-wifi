@@ -60,17 +60,21 @@ void loop() {
   
 
 
-if (xAxis > 110 && xAxis <140 && yAxis > 110 && yAxis <140){Stop();}
+if (xAxis > 110 && xAxis <140 && yAxis > 110 && yAxis <140){
+  Stop();
+}
 
 
 if (yAxis > 110 && yAxis <140){    
 
-  if (xAxis < 110){left();
+  if (xAxis < 110){
+    left();
     motorA = map(xAxis, 0, 110, 255, 100);
     motorB = map(xAxis, 0, 110, 255, 100);    
   }
 
-  if (xAxis > 140) {right();
+  if (xAxis > 140) {
+    right();
     motorA = map(xAxis, 140, 250, 100, 255);
     motorB = map(xAxis, 140, 250, 100, 255); 
   }
@@ -79,20 +83,24 @@ if (yAxis > 110 && yAxis <140){
 
   if (xAxis > 110 && xAxis <140){   
 
-  if (yAxis < 110){front();
+  if (yAxis < 110){
+    front();
     motorA = map(yAxis, 110, 0, 100, 255);
     motorB = map(yAxis, 110, 0, 100, 255); 
   }
 
-  if (yAxis > 140){reverse();
+  if (yAxis > 140){
+    reverse();
     motorA = map(yAxis, 140, 250, 100, 255);
     motorB = map(yAxis, 140, 250, 100, 255);
   }
  
   }else{
 
-    if (yAxis < 110){front();}
-    if (yAxis > 140){reverse();}
+    if (yAxis < 110){
+      front();}
+    if (yAxis > 140){
+      reverse();}
 
     if (xAxis < 110){
       motorA = 255;
